@@ -193,8 +193,17 @@ function viewPost(post) {
     <h2>${escapeHtml(post.title)}</h2>
     <p class="viewer-excerpt">${escapeHtml(post.excerpt)}</p>
     <div class="viewer-tags">${post.tags.map((t) => `<span class="tag">#${escapeHtml(t)}</span>`).join(" ")}</div>
+    <!-- In-article ad (highest CPM - user is engaged reading) -->
+    <div class="ad-slot ad-article">
+      <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="ARTICLE_SLOT_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
     <div class="post-body">${markdownToHtml(post.content)}</div>
+    <!-- Bottom of article ad -->
+    <div class="ad-slot ad-article-bottom">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="ARTICLE_BOTTOM_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
   `;
+  try { (window.adsbygoogle = window.adsbygoogle || []).push({}); (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
   viewer.showModal();
 }
 
@@ -251,6 +260,15 @@ function renderPosts() {
     fragment.querySelector(".delete-btn").addEventListener("click", () => deletePost(post.id));
 
     postsContainer.appendChild(fragment);
+
+    // Insert in-feed ad every 5 posts
+    if ((index + 1) % 5 === 0 && index < posts.length - 1) {
+      const adDiv = document.createElement("div");
+      adDiv.className = "ad-slot ad-infeed";
+      adDiv.innerHTML = `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="INFEED_SLOT_ID" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w"></ins>`;
+      postsContainer.appendChild(adDiv);
+      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+    }
   });
 }
 

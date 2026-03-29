@@ -473,3 +473,146 @@ button {
   color: #888;
   font-size: 0.85rem;
 }
+
+/* Ad Slots */
+.ad-slot {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  text-align: center;
+  min-height: 90px;
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.ad-leaderboard {
+  min-height: 100px;
+  margin-top: 0;
+}
+.ad-infeed {
+  margin: 1rem 0;
+  min-height: 120px;
+}
+.ad-article, .ad-article-bottom {
+  margin: 1.5rem 0;
+  max-width: 100%;
+}
+
+/* Revenue / Affiliate Section */
+.revenue-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.revenue-section h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.revenue-subtitle {
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.affiliate-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: #ddd;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.affiliate-card:hover {
+  transform: translateY(-4px);
+  border-color: #5ba4f5;
+  box-shadow: 0 8px 24px rgba(91,164,245,0.15);
+}
+.affiliate-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.affiliate-card h3 {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+.affiliate-card p {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+.affiliate-cta {
+  color: #5ba4f5;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Support / Donation Section */
+.support-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.support-section h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.support-section p {
+  color: #aaa;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+.support-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-donate, .btn-sponsor {
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-donate {
+  background: #ffdd00;
+  color: #1a1a1a;
+}
+.btn-sponsor {
+  background: #ea4aaa;
+  color: #fff;
+}
+.btn-donate:hover, .btn-sponsor:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 600px) {
+  .affiliate-grid {
+    grid-template-columns: 1fr;
+  }
+  .support-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
