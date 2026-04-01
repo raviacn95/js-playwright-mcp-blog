@@ -1,0 +1,11 @@
+{
+  "name": "js-playwright-mcp-blog",
+  "version": "1.0.0",
+  "description": "LinkedIn auto-poster for JS · Playwright · MCP blog posts",
+  "scripts": {
+    "post-to-linkedin": "node linkedin-poster.js"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}
