@@ -5,8 +5,8 @@
  * to LinkedIn, waiting 1 minute between posts.
  *
  * Required environment variables:
- *   LINKEDIN_EMAIL    – your LinkedIn login e-mail
- *   LINKEDIN_PASSWORD – your LinkedIn login password
+ *   LINKEDIN_EMAIL    – Ravirajkumar712@gmail.com
+ *   LINKEDIN_PASSWORD – Rajat1993!!!
  *
  * Optional:
  *   HEADLESS=false    – show the browser window (default: headless/true)
